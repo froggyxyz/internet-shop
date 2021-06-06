@@ -75,6 +75,16 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .products__item { width: 360px; height: 581px; background-color: #f8f8f8; margin-bottom: 30px; }
 
+.products__img { position: relative; }
+
+.products__img:hover .products__hover { opacity: 1; -webkit-transition: all linear 0.2s; transition: all linear 0.2s; }
+
+.products__hover { width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; top: 0; left: 0; background: rgba(58, 56, 56, 0.86); opacity: 0; -webkit-transition: all linear 0.1s; transition: all linear 0.1s; }
+
+.products__cart { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: none; border: 1px solid #fff; font-family: "Lato", sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #ffffff; padding: 10px 13px; cursor: pointer; }
+
+.products__cart img { margin-right: 11px; }
+
 .products__info { padding: 25px 18px 20px; }
 
 .products__heading { font-family: "Lato", sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; color: #000; margin-bottom: 13px; }
@@ -99,7 +109,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .feature__text { max-width: 316px; font-family: "Lato", sans-serif; font-size: 14px; font-weight: 300; line-height: 17px; color: #fbfbfb; }
 
-.subscribe { background: url(../img/subscribe/bg_img.jpg) center/cover no-repeat white; background-blend-mode: multiply; padding: 97px 0 156px; }
+.subscribe { background: url(../img/subscribe/bg_img.jpg) center/cover no-repeat rgba(244, 244, 244, 0.7); background-blend-mode: multiply; padding: 97px 0 156px; }
 
 .subscribe__inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -115,9 +125,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .subscribe__input { padding: 7px 22px; width: 256px; height: 49px; border: none; border-radius: 50px 0 0 50px; background: #e1e1e1; font-family: "Lato", sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #222224; opacity: 0.67; outline: none; }
 
-.subscribe__btn { width: 100px; height: 49px; border: none; border-radius: 0 50px 50px 0; background: #f16d7f; cursor: pointer; font-family: "Lato", sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #fff; -webkit-transition: all linear 0.1s; transition: all linear 0.1s; }
-
-.subscribe__btn:hover { background: #fff; color: #f16d7f; -webkit-transition: all linear 0.1s; transition: all linear 0.1s; }
+.subscribe__btn { width: 100px; height: 49px; border: none; border-radius: 0 50px 50px 0; background: #f16d7f; cursor: pointer; font-family: "Lato", sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #fff; }
 
 .footer { padding: 30px 0; background-color: #222224; }
 
@@ -136,4 +144,15 @@ table { border-collapse: collapse; border-spacing: 0; }
 .footer__icon:hover .footer__img { fill: #fff; -webkit-transition: all linear 0.1s; transition: all linear 0.1s; }
 
 .footer__img { fill: #000; -webkit-transition: all linear 0.1s; transition: all linear 0.1s; }
+
+/* catalog.html */
+.heading { padding: 60px 0; background: #f8f3f4; }
+
+.heading__inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.heading__title { font-family: "Lato", sans-serif; font-weight: 400; font-size: 24px; line-height: 29px; color: #f16d7f; text-transform: uppercase; }
+
+.heading__breadcrumbs, .heading .heading__link { font-family: "Lato", sans-serif; font-weight: 300; font-size: 14px; line-height: 17px; color: #636363; text-transform: uppercase; }
+
+.heading__breadcrumbs .heading__link_active, .heading .heading__link .heading__link_active { font-weight: 700; color: #f16d7f; }
 /*# sourceMappingURL=style.css.map */

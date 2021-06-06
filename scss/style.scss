@@ -321,6 +321,47 @@ table {
     margin-bottom: 30px;
   }
 
+  &__img {
+    position: relative;
+    &:hover {
+      .products__hover {
+        opacity: 1;
+        transition: all linear 0.2s;
+      }
+    }
+  }
+
+  &__hover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(58, 56, 56, 0.86);
+    opacity: 0;
+    transition: all linear 0.1s;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 1px solid #fff;
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    padding: 10px 13px;
+    cursor: pointer;
+    img {
+      margin-right: 11px;
+    }
+  }
+
   &__info {
     padding: 25px 18px 20px;
   }
@@ -415,7 +456,7 @@ table {
 
 .subscribe {
   background: url(../img/subscribe/bg_img.jpg) center/cover no-repeat
-    rgb(255, 255, 255);
+    rgba(244, 244, 244, 0.7);
   background-blend-mode: multiply;
   padding: 97px 0 156px;
 
@@ -491,12 +532,6 @@ table {
     font-size: 14px;
     line-height: 17px;
     color: #fff;
-    transition: all linear 0.1s;
-    &:hover {
-      background: #fff;
-      color: #f16d7f;
-      transition: all linear 0.1s;
-    }
   }
 }
 
@@ -547,5 +582,41 @@ table {
   &__img {
     fill: #000;
     transition: all linear 0.1s;
+  }
+}
+
+/* catalog.html */
+.heading {
+  padding: 60px 0;
+  background: #f8f3f4;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #f16d7f;
+    text-transform: uppercase;
+  }
+
+  &__breadcrumbs,
+  .heading__link {
+    font-family: $fontFamily;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+    text-transform: uppercase;
+
+    .heading__link_active {
+      font-weight: 700;
+      color: #f16d7f;
+    }
   }
 }
