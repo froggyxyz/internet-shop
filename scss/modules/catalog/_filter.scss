@@ -1,0 +1,49 @@
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 51px 20px 64px;
+
+  &__wrapper {
+    min-width: 690px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__main {
+    font-family: $fontFamily;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    cursor: pointer;
+    text-transform: uppercase;
+    img {
+      margin-left: 11px;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+    cursor: default;
+  }
+
+  &__item {
+    font-family: $fontFamily;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-right: 28px;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      margin-left: 10px;
+    }
+  }
+}
