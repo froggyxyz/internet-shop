@@ -12,11 +12,7 @@
   position: relative;
   z-index: 1000;
   &__title {
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    color: $secondaryColor;
+    @include fontSettings(14px, 17px, $secondaryColor, 300);
     text-transform: uppercase;
     &::after {
       display: block;
@@ -28,39 +24,24 @@
     }
   }
   &__subtitle {
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 22px;
-    color: #4d4d4d;
+    @include fontSettings(18px, 22px, #4d4d4d, 300);
     margin-bottom: 48px;
     text-transform: uppercase;
   }
   &__text {
     max-width: 550px;
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    color: #5e5e5e;
+    @include fontSettings(14px, 17px, #5e5e5e, 300);
     margin-bottom: 32px;
   }
   &__price {
     min-width: 641px;
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
-    color: $secondaryColor;
+    @include fontSettings(24px, 29px, $secondaryColor, 300);
     margin-bottom: 65px;
     padding-bottom: 65px;
     box-shadow: 0 1px 0 #eaeaea;
   }
   &__btn {
-    font-family: $fontFamily;
-    font-size: 16px;
-    line-height: 19px;
-    color: $secondaryColor;
+    @include fontSettings(16px, 19px, $secondaryColor);
     display: flex;
     align-items: center;
     background: none;

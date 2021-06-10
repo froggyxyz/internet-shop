@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import "partials/variables";
+@import "partials/mixins";
 @import "partials/resetstyles";
 @import "partials/container";
 @import "modules/global/header";
@@ -15,3 +16,4 @@
 @import "modules/catalog/pagination";
 @import "modules/product/slider";
 @import "modules/product/description";
+@import "modules/cart/cart";

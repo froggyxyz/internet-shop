@@ -7,11 +7,7 @@
     align-items: center;
   }
   &__text {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #fbfbfb;
+    @include fontSettings(16px, 19px, #fbfbfb);
   }
   &__wrapper {
     display: flex;

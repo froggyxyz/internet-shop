@@ -16,21 +16,13 @@
     align-items: center;
   }
   &__text {
-    font-family: $fontFamily;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #222224;
+    @include fontSettings(20px, 24px, #222224);
     text-align: center;
     margin-top: 30px;
   }
   &__title {
     max-width: 475px;
-    font-family: $fontFamily;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #222224;
+    @include fontSettings(18px, 22px, #222224);
     text-align: center;
     margin-bottom: 32px;
     .bold {
@@ -49,11 +41,7 @@
     border: none;
     border-radius: 50px 0 0 50px;
     background: #e1e1e1;
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #222224;
+    @include fontSettings(14px, 17px, #222224);
     opacity: 0.67;
     outline: none;
   }
@@ -64,11 +52,7 @@
     border-radius: 0 50px 50px 0;
     background: $secondaryColor;
     cursor: pointer;
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #fff;
+    @include fontSettings(14px, 17px, #fff);
     transition: all linear 0.1s;
     &:hover {
       color: $secondaryColor;

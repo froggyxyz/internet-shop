@@ -35,19 +35,11 @@
     margin-bottom: 0;
   }
   &__suptitle {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #fff;
+    @include fontSettings(16px, 19px, #fff);
     text-transform: uppercase;
   }
   &__title {
-    font-family: $fontFamily;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    color: $secondaryColor;
+    @include fontSettings(24px, 29px, $secondaryColor, 700);
     text-transform: uppercase;
   }
 }

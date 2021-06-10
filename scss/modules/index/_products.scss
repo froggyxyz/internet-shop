@@ -1,20 +1,12 @@
 .products {
   padding-bottom: 96px;
   &__title {
-    font-family: $fontFamily;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36px;
-    color: #222;
+    @include fontSettings(30px, 36px, #222);
     text-align: center;
     margin-bottom: 6px;
   }
   &__subtitle {
-    font-family: $fontFamily;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    color: #9f9f9f;
+    @include fontSettings(14px, 17px, #9f9f9f);
     text-align: center;
     margin-bottom: 48px;
   }
@@ -57,11 +49,7 @@
     align-items: center;
     background: none;
     border: 1px solid #fff;
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #fff;
+    @include fontSettings(14px, 17px, #fff);
     padding: 10px 13px;
     cursor: pointer;
     svg {
@@ -80,28 +68,16 @@
     padding: 25px 18px 20px;
   }
   &__heading {
-    font-family: $fontFamily;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 16px;
-    color: #000;
+    @include fontSettings(13px, 16px, #000);
     margin-bottom: 13px;
   }
   &__text {
     max-width: 318px;
-    font-family: $fontFamily;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 17px;
-    color: #5d5d5d;
+    @include fontSettings(14px, 17px, #5d5d5d, 300);
     margin-bottom: 18px;
   }
   &__price {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: $secondaryColor;
+    @include fontSettings(16px, 19px, $secondaryColor);
   }
   &__wrap {
     display: flex;
@@ -109,11 +85,7 @@
     align-items: center;
   }
   &__btn {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: $secondaryColor;
+    @include fontSettings(16px, 19px, $secondaryColor);
     outline: 1px solid $secondaryColor;
     padding: 14px 38px;
     transition: all linear 0.2s;

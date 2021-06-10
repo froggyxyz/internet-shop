@@ -9,11 +9,7 @@
     background: url(../img/intro/bg_img.png) -228px bottom no-repeat;
   }
   &__title {
-    font-family: $fontFamily;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38px;
-    color: #222;
+    @include fontSettings(32px, 38px, #222, 700);
     border-left: 12px solid $secondaryColor;
     max-width: 401px;
     margin-right: 100px;
