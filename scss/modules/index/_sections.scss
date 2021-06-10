@@ -1,12 +1,10 @@
 .sections {
   padding: 65px 0 96px 0;
-
   &__inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-
   &__item {
     display: flex;
     flex-direction: column;
@@ -15,30 +13,27 @@
     width: 360px;
     height: 260px;
     margin-bottom: 30px;
-
     &_women {
-      background: url(../img/sections/for_women.jpg) rgba(33, 22, 22, 0.7);
+      background: url(../img/sections/for_women.jpg) $sectionsColor;
       background-blend-mode: multiply;
     }
     &_men {
-      background: url(../img/sections/for_men.jpg) rgba(33, 22, 22, 0.7);
+      background: url(../img/sections/for_men.jpg) $sectionsColor;
       background-blend-mode: multiply;
     }
     &_kids {
-      background: url(../img/sections/for_kids.jpg) rgba(33, 22, 22, 0.7);
+      background: url(../img/sections/for_kids.jpg) $sectionsColor;
       background-blend-mode: multiply;
     }
     &_accesories {
-      background: url(../img/sections/accesories.jpg) rgba(33, 22, 22, 0.7);
+      background: url(../img/sections/accesories.jpg) $sectionsColor;
       background-blend-mode: multiply;
     }
   }
-
   &__item:last-child {
     width: 100%;
     margin-bottom: 0;
   }
-
   &__suptitle {
     font-family: $fontFamily;
     font-size: 16px;
@@ -47,13 +42,12 @@
     color: #fff;
     text-transform: uppercase;
   }
-
   &__title {
     font-family: $fontFamily;
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
-    color: #f16d7f;
+    color: $secondaryColor;
     text-transform: uppercase;
   }
 }

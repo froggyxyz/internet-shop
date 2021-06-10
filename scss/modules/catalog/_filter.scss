@@ -3,14 +3,12 @@
   justify-content: flex-start;
   align-items: center;
   padding: 51px 20px 64px;
-
   &__wrapper {
     min-width: 690px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   &__main {
     font-family: $fontFamily;
     font-weight: 600;
@@ -23,13 +21,11 @@
       margin-left: 11px;
     }
   }
-
   &__sort {
     display: flex;
     align-items: center;
     cursor: default;
   }
-
   &__item {
     font-family: $fontFamily;
     font-size: 14px;

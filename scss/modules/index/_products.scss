@@ -1,6 +1,5 @@
 .products {
   padding-bottom: 96px;
-
   &__title {
     font-family: $fontFamily;
     font-size: 30px;
@@ -10,7 +9,6 @@
     text-align: center;
     margin-bottom: 6px;
   }
-
   &__subtitle {
     font-family: $fontFamily;
     font-size: 14px;
@@ -20,14 +18,12 @@
     text-align: center;
     margin-bottom: 48px;
   }
-
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 18px;
   }
-
   &__item {
     width: 360px;
     height: 581px;
@@ -40,11 +36,9 @@
       }
     }
   }
-
   &__img {
     position: relative;
   }
-
   &__hover {
     width: 100%;
     height: 100%;
@@ -58,7 +52,6 @@
     opacity: 0;
     transition: all linear 0.1s;
   }
-
   &__cart {
     display: flex;
     align-items: center;
@@ -78,17 +71,14 @@
     &:hover {
       color: #000;
       background: #fff;
-
       svg {
         fill: #000;
       }
     }
   }
-
   &__info {
     padding: 25px 18px 20px;
   }
-
   &__heading {
     font-family: $fontFamily;
     font-size: 13px;
@@ -97,7 +87,6 @@
     color: #000;
     margin-bottom: 13px;
   }
-
   &__text {
     max-width: 318px;
     font-family: $fontFamily;
@@ -107,34 +96,30 @@
     color: #5d5d5d;
     margin-bottom: 18px;
   }
-
   &__price {
     font-family: $fontFamily;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
-    color: #f16d7f;
+    color: $secondaryColor;
   }
-
   &__wrap {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   &__btn {
     font-family: $fontFamily;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
-    color: #f26376;
-    outline: 1px solid #ff6a6a;
+    color: $secondaryColor;
+    outline: 1px solid $secondaryColor;
     padding: 14px 38px;
     transition: all linear 0.2s;
-
     &:hover {
       color: #fff;
-      background-color: #f16d7f;
+      background-color: $secondaryColor;
       transition: all linear 0.2s;
     }
   }

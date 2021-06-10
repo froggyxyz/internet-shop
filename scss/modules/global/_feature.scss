@@ -1,12 +1,10 @@
 .feature {
   padding: 104px 0;
   background-color: #222224;
-
   &__inner {
     display: flex;
     justify-content: space-between;
   }
-
   &__item {
     width: 360px;
     height: 134px;
@@ -15,7 +13,6 @@
     align-items: center;
     text-align: center;
   }
-
   &__heading {
     font-family: $fontFamily;
     font-size: 20px;
@@ -24,7 +21,6 @@
     color: #fbfbfb;
     margin: 25px 0px 16px;
   }
-
   &__text {
     max-width: 316px;
     font-family: $fontFamily;

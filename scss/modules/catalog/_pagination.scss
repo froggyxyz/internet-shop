@@ -11,7 +11,6 @@
   img[alt="right"] {
     margin-left: 6px;
   }
-
   &__link {
     font-family: $fontFamily;
     font-weight: 300;
@@ -22,7 +21,7 @@
     cursor: pointer;
     &_active,
     &:hover {
-      color: #ef5b70;
+      color: $secondaryColor;
     }
     // &_pr {
     //   padding-right: 0;

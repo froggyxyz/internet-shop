@@ -1,22 +1,19 @@
 .heading {
   padding: 60px 0;
   background: #f8f3f4;
-
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   &__title {
     font-family: $fontFamily;
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    color: #f16d7f;
+    color: $secondaryColor;
     text-transform: uppercase;
   }
-
   &__breadcrumbs,
   .heading__link {
     font-family: $fontFamily;
@@ -25,10 +22,9 @@
     line-height: 17px;
     color: #636363;
     text-transform: uppercase;
-
     .heading__link_active {
       font-weight: 700;
-      color: #f16d7f;
+      color: $secondaryColor;
     }
   }
 }

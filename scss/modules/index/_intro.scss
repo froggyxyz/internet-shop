@@ -14,7 +14,7 @@
     font-weight: 700;
     line-height: 38px;
     color: #222;
-    border-left: 12px solid #f16d7f;
+    border-left: 12px solid $secondaryColor;
     max-width: 401px;
     margin-right: 100px;
     padding-left: 16px;
@@ -24,7 +24,7 @@
       font-weight: 900;
     }
     .pink {
-      color: #f16d7f;
+      color: $secondaryColor;
     }
   }
 }

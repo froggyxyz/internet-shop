@@ -3,13 +3,11 @@
     rgba(244, 244, 244, 0.7);
   background-blend-mode: multiply;
   padding: 97px 0 156px;
-
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   &__left,
   &__right {
     max-width: 360px;
@@ -17,7 +15,6 @@
     flex-direction: column;
     align-items: center;
   }
-
   &__text {
     font-family: $fontFamily;
     font-size: 20px;
@@ -27,7 +24,6 @@
     text-align: center;
     margin-top: 30px;
   }
-
   &__title {
     max-width: 475px;
     font-family: $fontFamily;
@@ -43,11 +39,9 @@
       line-height: 29px;
     }
   }
-
   &__form {
     display: flex;
   }
-
   &__input {
     padding: 7px 22px;
     width: 256px;
@@ -63,13 +57,12 @@
     opacity: 0.67;
     outline: none;
   }
-
   &__btn {
     width: 100px;
     height: 49px;
     border: none;
     border-radius: 0 50px 50px 0;
-    background: #f16d7f;
+    background: $secondaryColor;
     cursor: pointer;
     font-family: $fontFamily;
     font-weight: 400;
@@ -78,7 +71,7 @@
     color: #fff;
     transition: all linear 0.1s;
     &:hover {
-      color: #f16d7f;
+      color: $secondaryColor;
       background: #fff;
       transition: all linear 0.1s;
     }

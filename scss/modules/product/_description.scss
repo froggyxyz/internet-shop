@@ -16,14 +16,14 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
-    color: #f16d7f;
+    color: $secondaryColor;
     text-transform: uppercase;
     &::after {
       display: block;
       content: "";
       width: 63px;
       height: 3px;
-      background: #ef5b70;
+      background: $secondaryColor;
       margin: 12px auto;
     }
   }
@@ -51,7 +51,7 @@
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
-    color: #ef5b70;
+    color: $secondaryColor;
     margin-bottom: 65px;
     padding-bottom: 65px;
     box-shadow: 0 1px 0 #eaeaea;
@@ -60,22 +60,22 @@
     font-family: $fontFamily;
     font-size: 16px;
     line-height: 19px;
-    color: #f26376;
+    color: $secondaryColor;
     display: flex;
     align-items: center;
     background: none;
     border: none;
-    outline: 1px solid #ff6a6a;
+    outline: 1px solid $secondaryColor;
     padding: 14px 23px;
     cursor: pointer;
     transition: all linear 0.2s;
     margin-top: 50px;
     svg {
-      fill: #ef5b70;
+      fill: $secondaryColor;
       margin-right: 23px;
     }
     &:hover {
-      background: #f26376;
+      background: $secondaryColor;
       color: #fff;
       transition: all linear 0.2s;
       svg {
