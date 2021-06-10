@@ -1,0 +1,44 @@
+.footer {
+  padding: 30px 0;
+  background-color: #222224;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #fbfbfb;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-right: 8px;
+    transition: all linear 0.1s;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $secondaryColor;
+      transition: all linear 0.1s;
+      .footer__img {
+        fill: #fff;
+        transition: all linear 0.1s;
+      }
+    }
+  }
+  &__img {
+    fill: #000;
+    transition: all linear 0.1s;
+  }
+}

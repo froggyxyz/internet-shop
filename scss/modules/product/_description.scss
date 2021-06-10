@@ -1,0 +1,87 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+  outline: 1px solid #eaeaea;
+  margin-top: -64px;
+  margin-bottom: 130px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+  &__title {
+    font-family: $fontFamily;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $secondaryColor;
+    text-transform: uppercase;
+    &::after {
+      display: block;
+      content: "";
+      width: 63px;
+      height: 3px;
+      background: $secondaryColor;
+      margin: 12px auto;
+    }
+  }
+  &__subtitle {
+    font-family: $fontFamily;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4d4d4d;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+  }
+  &__text {
+    max-width: 550px;
+    font-family: $fontFamily;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5e5e5e;
+    margin-bottom: 32px;
+  }
+  &__price {
+    min-width: 641px;
+    font-family: $fontFamily;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: $secondaryColor;
+    margin-bottom: 65px;
+    padding-bottom: 65px;
+    box-shadow: 0 1px 0 #eaeaea;
+  }
+  &__btn {
+    font-family: $fontFamily;
+    font-size: 16px;
+    line-height: 19px;
+    color: $secondaryColor;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: 1px solid $secondaryColor;
+    padding: 14px 23px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+    margin-top: 50px;
+    svg {
+      fill: $secondaryColor;
+      margin-right: 23px;
+    }
+    &:hover {
+      background: $secondaryColor;
+      color: #fff;
+      transition: all linear 0.2s;
+      svg {
+        fill: #fff;
+        transition: all linear 0.2s;
+      }
+    }
+  }
+}

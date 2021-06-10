@@ -1,0 +1,30 @@
+.intro {
+  background: #f1e4e6;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 764px;
+    background: url(../img/intro/bg_img.png) -228px bottom no-repeat;
+  }
+  &__title {
+    font-family: $fontFamily;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    color: #222;
+    border-left: 12px solid $secondaryColor;
+    max-width: 401px;
+    margin-right: 100px;
+    padding-left: 16px;
+    text-transform: uppercase;
+    .bolder {
+      font-size: 48px;
+      font-weight: 900;
+    }
+    .pink {
+      color: $secondaryColor;
+    }
+  }
+}
