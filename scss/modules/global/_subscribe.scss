@@ -4,16 +4,12 @@
   background-blend-mode: multiply;
   padding: 97px 0 156px;
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSettings(row, nowrap, space-between, center);
   }
   &__left,
   &__right {
+    @include flexSettings(column, nowrap, flex-start, center);
     max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   &__text {
     @include fontSettings(20px, 24px, #222224);
@@ -21,8 +17,8 @@
     margin-top: 30px;
   }
   &__title {
-    max-width: 475px;
     @include fontSettings(18px, 22px, #222224);
+    max-width: 475px;
     text-align: center;
     margin-bottom: 32px;
     .bold {
@@ -35,24 +31,24 @@
     display: flex;
   }
   &__input {
+    @include fontSettings(14px, 17px, #222224);
     padding: 7px 22px;
     width: 256px;
     height: 49px;
     border: none;
     border-radius: 50px 0 0 50px;
     background: #e1e1e1;
-    @include fontSettings(14px, 17px, #222224);
     opacity: 0.67;
     outline: none;
   }
   &__btn {
+    @include fontSettings(14px, 17px, #fff);
     width: 100px;
     height: 49px;
     border: none;
     border-radius: 0 50px 50px 0;
     background: $secondaryColor;
     cursor: pointer;
-    @include fontSettings(14px, 17px, #fff);
     transition: all linear 0.1s;
     &:hover {
       color: $secondaryColor;

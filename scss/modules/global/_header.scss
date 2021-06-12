@@ -3,14 +3,11 @@
   padding: 17px 0;
   background-color: #222;
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSettings(row, nowrap, space-between, center);
   }
   &__left,
   &__right {
-    display: flex;
-    align-items: center;
+    @include flexSettings(row, nowrap, flex-start, center);
   }
   &__logo {
     margin-right: 40px;
@@ -26,18 +23,15 @@
   &__item_relative {
     position: relative;
     .number {
+      @include flexSettings(row, nowrap, center, center);
+      @include fontSettings(12px, 14px, #fff);
       position: absolute;
       top: -9px;
       right: -9px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 19px;
       width: 19px;
-      @include fontSettings(12px, 14px, #fff);
       background: $secondaryColor;
       border-radius: 50%;
-      color: #fff;
     }
   }
 }

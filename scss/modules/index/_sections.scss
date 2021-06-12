@@ -1,15 +1,10 @@
 .sections {
   padding: 65px 0 96px 0;
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flexSettings(row, wrap, space-between);
   }
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexSettings(column, nowrap, center, center);
     width: 360px;
     height: 260px;
     margin-bottom: 30px;

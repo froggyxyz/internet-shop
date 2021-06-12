@@ -11,9 +11,7 @@
     margin-bottom: 48px;
   }
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flexSettings(row, wrap, space-between);
     margin-bottom: 18px;
   }
   &__item {
@@ -32,11 +30,9 @@
     position: relative;
   }
   &__hover {
+    @include flexSettings(row, nowrap, center, center);
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,11 +41,10 @@
     transition: all linear 0.1s;
   }
   &__cart {
-    display: flex;
-    align-items: center;
+    @include flexSettings(row, nowrap, flex-start, center);
+    @include fontSettings(14px, 17px, #fff);
     background: none;
     border: 1px solid #fff;
-    @include fontSettings(14px, 17px, #fff);
     padding: 10px 13px;
     cursor: pointer;
     svg {
@@ -80,9 +75,7 @@
     @include fontSettings(16px, 19px, $secondaryColor);
   }
   &__wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexSettings(row, nowrap, center, center);
   }
   &__btn {
     @include fontSettings(16px, 19px, $secondaryColor);
