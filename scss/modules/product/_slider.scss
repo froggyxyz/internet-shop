@@ -11,9 +11,7 @@
     background: url(../img/product/slide_1.png) no-repeat center;
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexSettings(row, nowrap, center, center);
     padding: 13px 17px;
     position: absolute;
     top: 50%;

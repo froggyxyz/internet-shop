@@ -1,8 +1,5 @@
 .description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexSettings(column, nowrap, center, center);
   text-align: center;
   padding: 60px 0;
   outline: 1px solid #eaeaea;
@@ -42,8 +39,7 @@
   }
   &__btn {
     @include fontSettings(16px, 19px, $secondaryColor);
-    display: flex;
-    align-items: center;
+    @include flexSettings(row, nowrap, flex-start, center);
     background: none;
     border: none;
     outline: 1px solid $secondaryColor;
