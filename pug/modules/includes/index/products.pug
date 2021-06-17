@@ -1,0 +1,13 @@
+include ../../common/mixins
+section.products
+    h2 Fetured Items
+    p.products__subtitle Shop for items based on what we featured in this week
+    .container.products__inner
+        +productCard("img/products/product_1.jpg", "product 1")
+        +productCard("img/products/product_2.jpg", "product 2")
+        +productCard("img/products/product_3.jpg", "product 3")
+        +productCard("img/products/product_4.jpg", "product 4")
+        +productCard("img/products/product_5.jpg", "product 5")
+        +productCard("img/products/product_6.jpg", "product 6")
+    .products__wrap
+        a(href="catalog.html") Browse All Product

@@ -1,6 +1,6 @@
 .products {
   padding-bottom: 96px;
-  &__title {
+  h2 {
     @include fontSettings(30px, 36px, #222);
     text-align: center;
     margin-bottom: 6px;
@@ -13,16 +13,16 @@
   &__inner {
     @include flexSettings(row, wrap, space-between);
     margin-bottom: 18px;
-  }
-  &__item {
-    width: 360px;
-    height: 581px;
-    background-color: #f8f8f8;
-    margin-bottom: 30px;
-    &:hover {
-      .products__hover {
-        opacity: 1;
-        transition: all linear 0.2s;
+    article {
+      width: 360px;
+      height: 581px;
+      background-color: #f8f8f8;
+      margin-bottom: 30px;
+      &:hover {
+        .products__hover {
+          opacity: 1;
+          transition: all linear 0.2s;
+        }
       }
     }
   }
@@ -39,53 +39,57 @@
     background: rgba(58, 56, 56, 0.86);
     opacity: 0;
     transition: all linear 0.1s;
-  }
-  &__cart {
-    @include flexSettings(row, nowrap, flex-start, center);
-    @include fontSettings(14px, 17px, #fff);
-    background: none;
-    border: 1px solid #fff;
-    padding: 10px 13px;
-    cursor: pointer;
-    svg {
-      margin-right: 11px;
-      fill: #fff;
-    }
-    &:hover {
-      color: #000;
-      background: #fff;
+    button {
+      @include flexSettings(row, nowrap, flex-start, center);
+      @include fontSettings(14px, 17px, #fff);
+      background: none;
+      border: 1px solid #fff;
+      padding: 10px 13px;
+      cursor: pointer;
+      transition: all linear 0.1s;
       svg {
-        fill: #000;
+        margin-right: 11px;
+        fill: #fff;
+        transition: all linear 0.1s;
+      }
+      &:hover {
+        color: #000;
+        background: #fff;
+        transition: all linear 0.1s;
+        svg {
+          fill: #000;
+          transition: all linear 0.1s;
+        }
       }
     }
   }
   &__info {
     padding: 25px 18px 20px;
-  }
-  &__heading {
-    @include fontSettings(13px, 16px, #000);
-    margin-bottom: 13px;
-  }
-  &__text {
-    max-width: 318px;
-    @include fontSettings(14px, 17px, #5d5d5d, 300);
-    margin-bottom: 18px;
-  }
-  &__price {
-    @include fontSettings(16px, 19px, $secondaryColor);
+    h3 {
+      @include fontSettings(13px, 16px, #000);
+      margin-bottom: 13px;
+    }
+    p {
+      max-width: 318px;
+      @include fontSettings(14px, 17px, #5d5d5d, 300);
+      margin-bottom: 18px;
+    }
+    span {
+      @include fontSettings(16px, 19px, $secondaryColor);
+    }
   }
   &__wrap {
     @include flexSettings(row, nowrap, center, center);
-  }
-  &__btn {
-    @include fontSettings(16px, 19px, $secondaryColor);
-    outline: 1px solid $secondaryColor;
-    padding: 14px 38px;
-    transition: all linear 0.2s;
-    &:hover {
-      color: #fff;
-      background-color: $secondaryColor;
+    a {
+      @include fontSettings(16px, 19px, $secondaryColor);
+      outline: 1px solid $secondaryColor;
+      padding: 14px 38px;
       transition: all linear 0.2s;
+      &:hover {
+        color: #fff;
+        background-color: $secondaryColor;
+        transition: all linear 0.2s;
+      }
     }
   }
 }

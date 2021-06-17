@@ -7,9 +7,9 @@
   }
   &__left,
   &__right {
-    @include flexSettings(row, nowrap, flex-start, center);
+    @include flexSettings(row, nowrap, space-between, center);
   }
-  &__logo {
+  a {
     margin-right: 40px;
   }
   &__menu {
@@ -17,21 +17,22 @@
     border: none;
     cursor: pointer;
   }
-  &__item:not(:last-child) {
+  &__item {
     margin-right: 33px;
-  }
-  &__item_relative {
-    position: relative;
-    .number {
-      @include flexSettings(row, nowrap, center, center);
-      @include fontSettings(12px, 14px, #fff);
-      position: absolute;
-      top: -9px;
-      right: -9px;
-      height: 19px;
-      width: 19px;
-      background: $secondaryColor;
-      border-radius: 50%;
+    &:last-child { margin-right: 0 }
+    &_relative {
+      position: relative;
+      span {
+        @include flexSettings(row, nowrap, center, center);
+        @include fontSettings(12px, 14px, #fff);
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        height: 19px;
+        width: 19px;
+        background: $secondaryColor;
+        border-radius: 50%;
+      }
     }
   }
 }

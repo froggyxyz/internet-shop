@@ -4,20 +4,20 @@
     @include flexSettings(column, nowrap, center, flex-end);
     height: 764px;
     background: url(../img/intro/bg_img.png) -228px bottom no-repeat;
-  }
-  &__title {
-    @include fontSettings(32px, 38px, #222, 700);
-    border-left: 12px solid $secondaryColor;
-    max-width: 401px;
-    margin-right: 100px;
-    padding-left: 16px;
-    text-transform: uppercase;
-    .bolder {
-      font-size: 48px;
-      font-weight: 900;
-    }
-    .pink {
-      color: $secondaryColor;
+    h1 {
+      @include fontSettings(32px, 38px, #222, 700);
+      border-left: 12px solid $secondaryColor;
+      max-width: 401px;
+      margin-right: 100px;
+      padding-left: 16px;
+      text-transform: uppercase;
+      .bolder {
+        font-size: 48px;
+        font-weight: 900;
+      }
+      .pink {
+        color: $secondaryColor;
+      }
     }
   }
 }

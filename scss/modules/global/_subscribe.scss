@@ -11,12 +11,12 @@
     @include flexSettings(column, nowrap, flex-start, center);
     max-width: 360px;
   }
-  &__text {
+  p {
     @include fontSettings(20px, 24px, #222224);
     text-align: center;
     margin-top: 30px;
   }
-  &__title {
+  h2 {
     @include fontSettings(18px, 22px, #222224);
     max-width: 475px;
     text-align: center;
@@ -27,7 +27,7 @@
       line-height: 29px;
     }
   }
-  &__form {
+  form {
     display: flex;
   }
   &__input {

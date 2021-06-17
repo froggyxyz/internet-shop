@@ -1,0 +1,5 @@
+@import "../partials/mixins";
+@include font('Lato', 300, normal, '/fonts/Lato/Lato-Light.ttf');
+@include font('Lato', 400, normal, '/fonts/Lato/Lato-Regular.ttf');
+@include font('Lato', 700, normal, '/fonts/Lato/Lato-Bold.ttf');
+@include font('Lato', 900, normal, '/fonts/Lato/Lato-Black.ttf');

@@ -8,7 +8,7 @@
   background-color: #fff;
   position: relative;
   z-index: 1000;
-  &__title {
+  h2 {
     @include fontSettings(14px, 17px, $secondaryColor, 300);
     text-transform: uppercase;
     &::after {
@@ -37,7 +37,7 @@
     padding-bottom: 65px;
     box-shadow: 0 1px 0 #eaeaea;
   }
-  &__btn {
+  button {
     @include fontSettings(16px, 19px, $secondaryColor);
     @include flexSettings(row, nowrap, flex-start, center);
     background: none;

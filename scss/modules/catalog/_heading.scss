@@ -3,10 +3,10 @@
   background: #f8f3f4;
   &__inner {
     @include flexSettings(row, nowrap, space-between, center);
-  }
-  &__title {
-    @include fontSettings(24px, 29px, $secondaryColor);
-    text-transform: uppercase;
+    h2 {
+      @include fontSettings(24px, 29px, $secondaryColor);
+      text-transform: uppercase;
+    }
   }
   &__breadcrumbs,
   .heading__link {
