@@ -1,20 +1,12 @@
 .filter {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flexSettings(row, nowrap, flex-start, center);
   padding: 51px 20px 64px;
   &__wrapper {
+    @include flexSettings(row, nowrap, space-between, center);
     min-width: 690px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   &__main {
-    font-family: $fontFamily;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
+    @include fontSettings(14px, 17px, #000, 600);
     cursor: pointer;
     text-transform: uppercase;
     img {
@@ -22,17 +14,12 @@
     }
   }
   &__sort {
-    display: flex;
-    align-items: center;
+    @include flexSettings(row, nowrap, flex-start, center);
     cursor: default;
   }
   &__item {
-    font-family: $fontFamily;
-    font-size: 14px;
-    line-height: 17px;
-    color: #6f6e6e;
-    display: flex;
-    align-items: center;
+    @include fontSettings(14px, 17px, #6f6e6e);
+    @include flexSettings(row, nowrap, flex-start, center);
     text-transform: uppercase;
     margin-right: 28px;
     &:last-child {
@@ -43,3 +30,4 @@
     }
   }
 }
+::-webkit-details-marker { display: none }

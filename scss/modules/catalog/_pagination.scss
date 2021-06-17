@@ -1,7 +1,5 @@
 .pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexSettings(row, nowrap, space-between, center);
   padding: 12px 16px;
   border: 1px solid #ebebeb;
   border-radius: 5px;
@@ -12,11 +10,7 @@
     margin-left: 6px;
   }
   &__link {
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: #c4c4c4;
+    @include fontSettings(16px, 19px, #c4c4c4, 300);
     padding: 0 11px;
     cursor: pointer;
     &_active,
@@ -31,11 +25,7 @@
     // }
   }
   span {
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: #c4c4c4;
+    @include fontSettings(16px, 19px, #c4c4c4, 300);
     cursor: default;
   }
 }

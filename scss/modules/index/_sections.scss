@@ -1,18 +1,17 @@
 .sections {
   padding: 65px 0 96px 0;
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flexSettings(row, wrap, space-between);
   }
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexSettings(column, nowrap, center, center);
     width: 360px;
     height: 260px;
     margin-bottom: 30px;
+    &:last-child {
+      width: 100%;
+      margin-bottom: 0;
+    }
     &_women {
       background: url(../img/sections/for_women.jpg) $sectionsColor;
       background-blend-mode: multiply;
@@ -29,25 +28,13 @@
       background: url(../img/sections/accesories.jpg) $sectionsColor;
       background-blend-mode: multiply;
     }
-  }
-  &__item:last-child {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  &__suptitle {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  &__title {
-    font-family: $fontFamily;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    color: $secondaryColor;
-    text-transform: uppercase;
+    p {
+      @include fontSettings(16px, 19px, #fff);
+      text-transform: uppercase;
+    }
+    h2 {
+      @include fontSettings(24px, 29px, $secondaryColor, 700);
+      text-transform: uppercase;
+    }
   }
 }

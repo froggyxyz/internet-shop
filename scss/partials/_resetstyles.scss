@@ -113,12 +113,18 @@ ul {
   margin: 0;
   list-style: none;
 }
-li {
-  padding: 0;
-  margin-left: 13px;
-}
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+input {
+  outline: none;
 }
 /* конец кода сброса стилей браузера */

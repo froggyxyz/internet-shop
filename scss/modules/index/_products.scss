@@ -1,38 +1,28 @@
 .products {
   padding-bottom: 96px;
-  &__title {
-    font-family: $fontFamily;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36px;
-    color: #222;
+  h2 {
+    @include fontSettings(30px, 36px, #222);
     text-align: center;
     margin-bottom: 6px;
   }
   &__subtitle {
-    font-family: $fontFamily;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    color: #9f9f9f;
+    @include fontSettings(14px, 17px, #9f9f9f);
     text-align: center;
     margin-bottom: 48px;
   }
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flexSettings(row, wrap, space-between);
     margin-bottom: 18px;
-  }
-  &__item {
-    width: 360px;
-    height: 581px;
-    background-color: #f8f8f8;
-    margin-bottom: 30px;
-    &:hover {
-      .products__hover {
-        opacity: 1;
-        transition: all linear 0.2s;
+    article {
+      width: 360px;
+      height: 581px;
+      background-color: #f8f8f8;
+      margin-bottom: 30px;
+      &:hover {
+        .products__hover {
+          opacity: 1;
+          transition: all linear 0.2s;
+        }
       }
     }
   }
@@ -40,87 +30,66 @@
     position: relative;
   }
   &__hover {
+    @include flexSettings(row, nowrap, center, center);
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
     background: rgba(58, 56, 56, 0.86);
     opacity: 0;
     transition: all linear 0.1s;
-  }
-  &__cart {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: 1px solid #fff;
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #fff;
-    padding: 10px 13px;
-    cursor: pointer;
-    svg {
-      margin-right: 11px;
-      fill: #fff;
-    }
-    &:hover {
-      color: #000;
-      background: #fff;
+    button {
+      @include flexSettings(row, nowrap, flex-start, center);
+      @include fontSettings(14px, 17px, #fff);
+      background: none;
+      border: 1px solid #fff;
+      padding: 10px 13px;
+      cursor: pointer;
+      transition: all linear 0.1s;
       svg {
-        fill: #000;
+        margin-right: 11px;
+        fill: #fff;
+        transition: all linear 0.1s;
+      }
+      &:hover {
+        color: #000;
+        background: #fff;
+        transition: all linear 0.1s;
+        svg {
+          fill: #000;
+          transition: all linear 0.1s;
+        }
       }
     }
   }
   &__info {
     padding: 25px 18px 20px;
-  }
-  &__heading {
-    font-family: $fontFamily;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 16px;
-    color: #000;
-    margin-bottom: 13px;
-  }
-  &__text {
-    max-width: 318px;
-    font-family: $fontFamily;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 17px;
-    color: #5d5d5d;
-    margin-bottom: 18px;
-  }
-  &__price {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: $secondaryColor;
+    h3 {
+      @include fontSettings(13px, 16px, #000);
+      margin-bottom: 13px;
+    }
+    p {
+      max-width: 318px;
+      @include fontSettings(14px, 17px, #5d5d5d, 300);
+      margin-bottom: 18px;
+    }
+    span {
+      @include fontSettings(16px, 19px, $secondaryColor);
+    }
   }
   &__wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__btn {
-    font-family: $fontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: $secondaryColor;
-    outline: 1px solid $secondaryColor;
-    padding: 14px 38px;
-    transition: all linear 0.2s;
-    &:hover {
-      color: #fff;
-      background-color: $secondaryColor;
+    @include flexSettings(row, nowrap, center, center);
+    a {
+      @include fontSettings(16px, 19px, $secondaryColor);
+      outline: 1px solid $secondaryColor;
+      padding: 14px 38px;
       transition: all linear 0.2s;
+      &:hover {
+        color: #fff;
+        background-color: $secondaryColor;
+        transition: all linear 0.2s;
+      }
     }
   }
 }
