@@ -3,34 +3,34 @@
   background-color: #222224;
   &__inner {
     @include flexSettings(row, nowrap, space-between, center);
-  }
-  &__text {
-    @include fontSettings(16px, 19px, #fbfbfb);
+    p {
+      @include fontSettings(16px, 19px, #fbfbfb);
+    }
   }
   &__wrapper {
     display: flex;
-  }
-  &__icon {
-    @include flexSettings(row, nowrap, center, center);
-    width: 32px;
-    height: 32px;
-    background-color: #fff;
-    margin-right: 8px;
-    transition: all linear 0.1s;
-    &:last-child {
-      margin-right: 0;
-    }
-    &:hover {
-      background-color: $secondaryColor;
+    a {
+      @include flexSettings(row, nowrap, center, center);
+      width: 32px;
+      height: 32px;
+      background-color: #fff;
+      margin-right: 8px;
       transition: all linear 0.1s;
-      .footer__img {
-        fill: #fff;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        background-color: $secondaryColor;
+        transition: all linear 0.1s;
+        svg {
+          fill: #fff;
+          transition: all linear 0.1s;
+        }
+      }
+      svg {
+        fill: #000;
         transition: all linear 0.1s;
       }
     }
-  }
-  &__img {
-    fill: #000;
-    transition: all linear 0.1s;
   }
 }

@@ -8,6 +8,10 @@
     width: 360px;
     height: 260px;
     margin-bottom: 30px;
+    &:last-child {
+      width: 100%;
+      margin-bottom: 0;
+    }
     &_women {
       background: url(../img/sections/for_women.jpg) $sectionsColor;
       background-blend-mode: multiply;
@@ -24,17 +28,13 @@
       background: url(../img/sections/accesories.jpg) $sectionsColor;
       background-blend-mode: multiply;
     }
-  }
-  &__item:last-child {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  &__suptitle {
-    @include fontSettings(16px, 19px, #fff);
-    text-transform: uppercase;
-  }
-  &__title {
-    @include fontSettings(24px, 29px, $secondaryColor, 700);
-    text-transform: uppercase;
+    p {
+      @include fontSettings(16px, 19px, #fff);
+      text-transform: uppercase;
+    }
+    h2 {
+      @include fontSettings(24px, 29px, $secondaryColor, 700);
+      text-transform: uppercase;
+    }
   }
 }

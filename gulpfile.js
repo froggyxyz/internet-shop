@@ -1,38 +1,42 @@
 const gulp = require('gulp');
+const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const clean = require('gulp-clean-css');
+const short = require('gulp-shorthand');
 const browsersync = require('browser-sync');
  
 sass.compiler = require('node-sass');
 
-gulp.task('html', function() {
-  return gulp.src('./*.html', {since: gulp.lastRun('html')})
-    .pipe(gulp.dest('./html/'))
+function pug2html() {
+  return gulp.src('./pug/*.pug')
+    .pipe(pug({ pretty: true }))
+    .pipe(gulp.dest('./'))
     .pipe(browsersync.stream());
-});
+};
  
-gulp.task('sass', function() {
-  return gulp.src('./scss/**/*.scss')
+function sass2css() {
+  return gulp.src('./scss/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({
-        outputStyle: 'compressed',
-    }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']))
+    .pipe(short())
+    .pipe(clean({ level: 2 }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css/'))
     .pipe(browsersync.stream());
-});
+};
 
-gulp.task('server', function() {
+function server() {
   browsersync.init({
     server: {
       baseDir: './',
     },
     notify: false,
   });
-  gulp.watch('./*.html', {usePolling: true}, gulp.series('html'));
-  gulp.watch('./scss/**/*.scss', {usePolling: true}, gulp.series('sass'));
-});
+  gulp.watch('./pug/**/*.pug', {usePolling: true}, gulp.series(pug2html));
+  gulp.watch('./scss/**/*.scss', {usePolling: true}, gulp.series(sass2css));
+};
 
-exports.default = gulp.series('html', 'sass', 'server');
+exports.default = gulp.series(gulp.parallel(pug2html, sass2css), server);

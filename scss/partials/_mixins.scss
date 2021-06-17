@@ -14,3 +14,12 @@
     justify-content: $justifyContent;
     align-items: $alignItems;
 }
+
+@mixin font($fontFamily, $fontWeight, $fontStyle, $src) {
+    @font-face {
+        font-family: $fontFamily;
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        src: url($src);
+    }
+}

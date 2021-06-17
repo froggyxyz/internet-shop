@@ -1,0 +1,22 @@
+section.products
+    .filter.container
+        .filter__wrapper
+            .filter__main FILTER
+                img(src="img/filters/filter.svg" alt="filter")
+            .filter__sort
+                .filter__item TRENDING NOW
+                    img(src="img/filters/arrow.svg" alt="sort")
+                .filter__item SIZE
+                    img(src="img/filters/arrow.svg" alt="sort")
+                .filter__item PRICE
+                    img(src="img/filters/arrow.svg" alt="sort")
+    .container.products__inner
+        +productCard("img/catalog/men/product_1.jpg", "product 1")
+        +productCard("img/catalog/men/product_2.jpg", "product 2")
+        +productCard("img/catalog/men/product_3.jpg", "product 3")
+        +productCard("img/catalog/men/product_4.jpg", "product 4")
+        +productCard("img/catalog/men/product_5.jpg", "product 5")
+        +productCard("img/catalog/men/product_6.jpg", "product 6")
+        +productCard("img/catalog/men/product_7.jpg", "product 7")
+        +productCard("img/catalog/men/product_8.jpg", "product 8")
+        +productCard("img/catalog/men/product_9.jpg", "product 9")
