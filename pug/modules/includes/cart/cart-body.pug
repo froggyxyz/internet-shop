@@ -1,0 +1,54 @@
+section.cart-body
+    .container.cart-body__inner
+        .cart-body__left
+            article
+                button
+                    img(src="img/cart/delete.svg")
+                .cart-body__img
+                    img(src="img/cart/cart_1.jpg")
+                .cart-body__info
+                    h3 MANGO  PEOPLE  T-SHIRT
+                    ul
+                        li Price: 
+                            span.pink $300
+                        li Color: 
+                            span.grey Red
+                        li Size: 
+                            span.grey XI
+                        li Quantity: 
+                            input(type="number" value="2")
+            article
+                button
+                    img(src="img/cart/delete.svg")
+                .cart-body__img
+                    img(src="img/cart/cart_2.jpg")
+                .cart-body__info
+                    h3 MANGO  PEOPLE  T-SHIRT
+                    ul
+                        li Price: 
+                            span.pink $300
+                        li Color: 
+                            span.grey Red
+                        li Size: 
+                            span.grey XI
+                        li Quantity: 
+                            input(type="number" value="2")
+            .cart-body__wrap
+                button CLEAR SHOPPING CART
+                button CONTINUE SHOPPING
+        .cart-body__right
+            form(method="POST")
+                h2 SHIPPING ADRESS
+                input(type="text" placeholder="Bangladesh")
+                input(type="text" placeholder="State")
+                input(type="number" placeholder="Postcode / Zip")
+                button(type="submit") GET A QUOTE
+            .cart-body__total
+                .cart-body__description
+                    p SUB TOTAL
+                        span $900
+                    h2 GRAND TOTAL
+                        span $900
+                .cart-body__wrapper
+                    button PROCEED TO CHECKOUT
+

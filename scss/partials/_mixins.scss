@@ -1,0 +1,25 @@
+@mixin fontSettings($fontSize, $lineHeight, $color, $fontWeight: 400, $fontFamily: $fontFamily, $fontStyle: normal) {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-style: $fontStyle;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+@mixin flexSettings($flexDirection: row, $flexWrap: nowrap, $justifyContent: flex-start, $alignItems: stretch) {
+    display: flex;
+    flex-direction: $flexDirection;
+    flex-wrap: $flexWrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin font($fontFamily, $fontWeight, $fontStyle, $src) {
+    @font-face {
+        font-family: $fontFamily;
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        src: url($src);
+    }
+}

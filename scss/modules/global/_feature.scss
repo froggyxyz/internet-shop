@@ -2,31 +2,20 @@
   padding: 104px 0;
   background-color: #222224;
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    @include flexSettings(row, nowrap, space-between, baseline);
   }
   &__item {
+    @include flexSettings(column, nowrap, flex-start, center);
     width: 360px;
     height: 134px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-  }
-  &__heading {
-    font-family: $fontFamily;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #fbfbfb;
-    margin: 25px 0px 16px;
-  }
-  &__text {
-    max-width: 316px;
-    font-family: $fontFamily;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 17px;
-    color: #fbfbfb;
+    h3 {
+      @include fontSettings(20px, 24px, #fbfbfb);
+      margin: 25px 0px 16px;
+    }
+    p {
+      @include fontSettings(14px, 17px, #fbfbfb, 300);
+      max-width: 316px;
+    }
   }
 }
