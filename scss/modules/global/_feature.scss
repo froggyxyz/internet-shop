@@ -9,6 +9,9 @@
     width: 360px;
     height: 134px;
     text-align: center;
+    svg {
+      fill: $secondaryColor;
+    }
     h3 {
       @include fontSettings(20px, 24px, #fbfbfb);
       margin: 25px 0px 16px;

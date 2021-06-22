@@ -5,8 +5,7 @@ html(lang="en")
     body
         include modules/common/header
         main
-            include modules/includes/catalog/heading
-            include modules/includes/catalog/products
-            include modules/common/feature
+            +heading("REGISTRATION")
+            include modules/includes/registration/registration-body
             include modules/common/subscribe
         include modules/common/footer

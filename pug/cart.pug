@@ -1,10 +1,11 @@
+include partials/mixins
 doctype html
 html(lang="en")
     include modules/common/head
-    include modules/common/header
     body
+        include modules/common/header
         main
-            include modules/includes/cart/heading
+            +heading("SHOPPING CART")
             include modules/includes/cart/cart-body
             include modules/common/subscribe
         include modules/common/footer
