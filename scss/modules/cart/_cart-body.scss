@@ -141,4 +141,7 @@
             }
         }
     }
+    &__img {
+        @include flexSettings(row, nowrap, stretch, stretch);
+    }
 }
