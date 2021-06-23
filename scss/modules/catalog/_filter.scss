@@ -1,21 +1,71 @@
 .filter {
   @include flexSettings(row, nowrap, flex-start, center);
   padding: 51px 20px 64px;
-  &__wrapper {
-    @include flexSettings(row, nowrap, space-between, center);
-    min-width: 690px;
+  &__inner {
+    @include flexSettings(row, nowrap, center, center);
+    position: relative;
+    width: 100%;
   }
   &__main {
-    @include fontSettings(14px, 17px, #000, 600);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    z-index: 1000;
     cursor: pointer;
-    text-transform: uppercase;
-    img {
-      margin-left: 11px;
+    background: #fff;
+    padding: 13px 16px 0;
+    min-width: 360px;
+    &[open] {
+      box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+      .filter__title {
+        color: $secondaryColor;
+        svg {
+          fill: $secondaryColor;
+        }
+      }
+    }
+    .filter__title {
+      @include fontSettings(14px, 17px, #000, 600);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 16px;
+      svg {
+        fill: #000;
+        margin-left: 11px;
+      }
+    }
+    details {
+      &[open] {
+        summary {
+          color: $secondaryColor;
+          margin-bottom: 0;
+        }
+      }
+      summary {
+        @include fontSettings(14px, 17px, #6F6E6E, 400, $fontFamily, normal);
+        text-transform: uppercase;
+        display: block;
+        padding: 11px;
+        margin-bottom: 18px;
+        border-left: 5px solid $secondaryColor;
+        box-shadow: 0 1px 0 #EBEBEB;
+        &:hover { color: $secondaryColor; }
+      }
+      ul {
+        padding: 24px 0 13px;
+        li {
+          @include fontSettings(14px, 17px, #6F6E6E, 400, $fontFamily, normal);
+          margin-left: 16px;
+          margin-bottom: 11px;
+          &:hover { color: $secondaryColor; }
+        }
+      }
     }
   }
   &__sort {
     @include flexSettings(row, nowrap, flex-start, center);
-    cursor: default;
+    cursor: pointer;
+    position: relative;
   }
   &__item {
     @include fontSettings(14px, 17px, #6f6e6e);
@@ -25,9 +75,47 @@
     &:last-child {
       margin-right: 0;
     }
+    &_first:hover {
+      .filter__sorting_first {
+        display: flex;
+      }
+    }
+    &_second:hover {
+      .filter__sorting_second {
+        display: flex;
+      }
+    }
+    &_third:hover {
+      .filter__sorting_third {
+        display: flex;
+      }
+    }
     img {
       margin-left: 10px;
     }
   }
+  &__sorting {
+    @include flexSettings(column, nowrap);
+    min-width: 79px;
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    z-index: 1000;
+    line-height: 16px;
+    background: #fff;
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    padding: 9px 7px;
+    display: none;
+    text-transform: none;
+    &_first {
+      max-width: 160px;
+      left: -13px;
+    }
+    &_third {
+      right: -7px;
+    }
+  }
+  &__wrapper {
+    margin-bottom: 6px;
+  }
 }
-::-webkit-details-marker { display: none }

@@ -1,15 +1,98 @@
 section.products
     .filter.container
-        .filter__wrapper
-            .filter__main FILTER
-                img(src="img/filters/filter.svg" alt="filter")
+        .filter__inner
+            details.filter__main
+                summary.filter__title FILTER
+                    svg(width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z")
+                details
+                    summary CATEGORY
+                    ul
+                        li Accessories
+                        li Bags
+                        li Denim
+                        li Hoodies & Sweatshirts
+                        li Jackets & Coats
+                        li Polos
+                        li Shirts
+                        li Shoes
+                        li Sweaters & Knits
+                        li T-Shirts
+                        li Tanks
+                details
+                    summary BRAND
+                    ul
+                        li Accessories
+                        li Bags
+                        li Denim
+                        li Hoodies & Sweatshirts
+                        li Jackets & Coats
+                        li Polos
+                        li Shirts
+                        li Shoes
+                        li Sweaters & Knits
+                        li T-Shirts
+                        li Tanks
+                details
+                    summary DESIGNER
+                    ul
+                        li Accessories
+                        li Bags
+                        li Denim
+                        li Hoodies & Sweatshirts
+                        li Jackets & Coats
+                        li Polos
+                        li Shirts
+                        li Shoes
+                        li Sweaters & Knits
+                        li T-Shirts
+                        li Tanks
             .filter__sort
-                .filter__item TRENDING NOW
+                .filter__item.filter__item_first TRENDING NOW
                     img(src="img/filters/arrow.svg" alt="sort")
-                .filter__item SIZE
+                    .filter__sorting.filter__sorting_first
+                        .filter__wrapper
+                            input(id="xs" type="checkbox")
+                            label(for="xs") Lorem ipsum
+                        .filter__wrapper
+                            input(id="s" type="checkbox")
+                            label(for="s") Lorem ipsum dolor
+                        .filter__wrapper
+                            input(id="m" type="checkbox")
+                            label(for="m") Lorem
+                        .filter__wrapper
+                            input(id="l" type="checkbox")
+                            label(for="l") Lorem ipsum dolor
+                .filter__item.filter__item_second SIZE
                     img(src="img/filters/arrow.svg" alt="sort")
-                .filter__item PRICE
+                    .filter__sorting.filter__sorting_second
+                        .filter__wrapper
+                            input(id="xs" type="checkbox")
+                            label(for="xs") XS
+                        .filter__wrapper
+                            input(id="s" type="checkbox")
+                            label(for="s") S
+                        .filter__wrapper
+                            input(id="m" type="checkbox")
+                            label(for="m") M
+                        .filter__wrapper
+                            input(id="l" type="checkbox")
+                            label(for="l") L
+                .filter__item.filter__item_third PRICE
                     img(src="img/filters/arrow.svg" alt="sort")
+                    .filter__sorting.filter__sorting_third
+                        .filter__wrapper
+                            input(id="xs" type="checkbox")
+                            label(for="xs") $200
+                        .filter__wrapper
+                            input(id="s" type="checkbox")
+                            label(for="s") $300
+                        .filter__wrapper
+                            input(id="m" type="checkbox")
+                            label(for="m") $500
+                        .filter__wrapper
+                            input(id="l" type="checkbox")
+                            label(for="l") $800
     .container.products__inner
         +productCard("img/catalog/men/product_1.jpg", "product 1")
         +productCard("img/catalog/men/product_2.jpg", "product 2")
