@@ -19,6 +19,7 @@
       box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
       .filter__title {
         color: $secondaryColor;
+        margin-bottom: 16px;
         svg {
           fill: $secondaryColor;
         }
@@ -28,7 +29,6 @@
       @include fontSettings(14px, 17px, #000, 600);
       text-transform: uppercase;
       display: block;
-      margin-bottom: 16px;
       svg {
         fill: #000;
         margin-left: 11px;

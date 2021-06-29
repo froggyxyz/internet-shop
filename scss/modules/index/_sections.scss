@@ -5,7 +5,7 @@
   }
   &__item {
     @include flexSettings(column, nowrap, center, center);
-    width: 360px;
+    width: 31.5%;
     height: 260px;
     margin-bottom: 30px;
     &:last-child {
@@ -13,19 +13,19 @@
       margin-bottom: 0;
     }
     &_women {
-      background: url(../img/sections/for_women.jpg) $sectionsColor;
+      background: url(../img/sections/for_women.jpg) $sectionsColor center/cover;
       background-blend-mode: multiply;
     }
     &_men {
-      background: url(../img/sections/for_men.jpg) $sectionsColor;
+      background: url(../img/sections/for_men.jpg) $sectionsColor center/cover;
       background-blend-mode: multiply;
     }
     &_kids {
-      background: url(../img/sections/for_kids.jpg) $sectionsColor;
+      background: url(../img/sections/for_kids.jpg) $sectionsColor center/cover;
       background-blend-mode: multiply;
     }
     &_accesories {
-      background: url(../img/sections/accesories.jpg) $sectionsColor;
+      background: url(../img/sections/accesories.jpg) $sectionsColor center/cover;
       background-blend-mode: multiply;
     }
     p {
