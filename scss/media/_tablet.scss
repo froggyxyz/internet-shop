@@ -1,0 +1,101 @@
+@media (max-width: 768px) {
+    .intro {
+        &__inner {
+            background: url(../img/intro/bg_img.png) 0px/50% auto bottom no-repeat;
+            height: 368px;
+            h1 {
+                @include fontSettings(24px, 29px, #222, 700, $fontFamily, normal);
+                margin-right: 0;
+                max-width: 308px;
+                .bolder {
+                    font-size: 44px;
+                    line-height: 53px;
+                }
+            }
+        }
+    }
+    .sections {
+        padding: 20px 0 154px;
+        &__item {
+            height: 167px;
+            margin-bottom: 20px;
+            &_accesories {
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+    .products {
+        padding-bottom: 65px;
+        &__inner {
+            margin-bottom: 16px;
+            article { margin-bottom: 16px; }
+        }
+    }
+    .feature {
+        padding: 48px 0 64px;
+        &__inner {
+            @include flexSettings(column, nowrap, center, center);
+        }
+        &__item {
+            margin-bottom: 48px;
+            &:last-child { margin-bottom: 0; }
+        }
+    }
+    .subscribe {
+        padding: 64px 0 140px;
+        background-position: -350px;
+        background-size: cover;
+        &__inner {
+            @include flexSettings(column, nowrap, center, center);
+        }
+        &__left { margin-bottom: 75px; }
+    }
+    .filter {
+        padding: 24px 16px 40px;
+        &__inner {
+            @include flexSettings(row, nowrap, space-between, center);
+        }
+        &__main {
+            position: static;
+            padding: 0;
+        }
+    }
+    .description {
+        outline: none;
+        margin-top: 0;
+    }
+    .cart-body {
+        &__inner {
+            @include flexSettings(column, nowrap, flex-start, stretch)
+        }
+        &__wrap {
+            padding: 0 114px;
+        }
+        &__right {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            form { min-width: 360px; }
+            margin-top: 64px;
+        }
+        &__total {
+            margin-top: 40px;
+            max-height: 214px;
+        }
+    }
+    .registration-body {
+        form {
+            margin-right: 22px;
+        }
+        &__info {
+            h2, p {
+                @include fontSettings(16px, 19px, #000, 300, $fontFamily, normal);
+            }
+            ul > li {
+                @include fontSettings(16px, 19px, #000, 300, $fontFamily, normal);
+                 margin-bottom: 16px;
+            }
+        }
+    }
+}
