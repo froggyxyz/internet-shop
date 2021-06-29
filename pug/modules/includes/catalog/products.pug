@@ -52,17 +52,17 @@ section.products
                     img(src="img/filters/arrow.svg" alt="sort")
                     .filter__sorting.filter__sorting_first
                         .filter__wrapper
-                            input(id="xs" type="checkbox")
-                            label(for="xs") Lorem ipsum
+                            input(id="firstItem" type="checkbox")
+                            label(for="firstItem") Lorem ipsum
                         .filter__wrapper
-                            input(id="s" type="checkbox")
-                            label(for="s") Lorem ipsum dolor
+                            input(id="secondItem" type="checkbox")
+                            label(for="secondItem") Lorem ipsum dolor
                         .filter__wrapper
-                            input(id="m" type="checkbox")
-                            label(for="m") Lorem
+                            input(id="thirdItem" type="checkbox")
+                            label(for="thirdItem") Lorem
                         .filter__wrapper
-                            input(id="l" type="checkbox")
-                            label(for="l") Lorem ipsum dolor
+                            input(id="fourthItem" type="checkbox")
+                            label(for="fourthItem") Lorem ipsum dolor
                 .filter__item.filter__item_second SIZE
                     img(src="img/filters/arrow.svg" alt="sort")
                     .filter__sorting.filter__sorting_second
@@ -82,17 +82,17 @@ section.products
                     img(src="img/filters/arrow.svg" alt="sort")
                     .filter__sorting.filter__sorting_third
                         .filter__wrapper
-                            input(id="xs" type="checkbox")
-                            label(for="xs") $200
+                            input(id="firstPrice" type="checkbox")
+                            label(for="firstPrice") $200
                         .filter__wrapper
-                            input(id="s" type="checkbox")
-                            label(for="s") $300
+                            input(id="secondPrice" type="checkbox")
+                            label(for="secondPrice") $300
                         .filter__wrapper
-                            input(id="m" type="checkbox")
-                            label(for="m") $500
+                            input(id="thirdPrice" type="checkbox")
+                            label(for="thirdPrice") $500
                         .filter__wrapper
-                            input(id="l" type="checkbox")
-                            label(for="l") $800
+                            input(id="fourthPrice" type="checkbox")
+                            label(for="fourthPrice") $800
     .container.products__inner
         +productCard("img/catalog/men/product_1.jpg", "product 1")
         +productCard("img/catalog/men/product_2.jpg", "product 2")
@@ -103,3 +103,17 @@ section.products
         +productCard("img/catalog/men/product_7.jpg", "product 7")
         +productCard("img/catalog/men/product_8.jpg", "product 8")
         +productCard("img/catalog/men/product_9.jpg", "product 9")
+    .products__wrapper
+        .pagination
+            a(href="#")
+                img(src="img/pagination/arrow-left.svg" alt="left")
+            a.pagination__link.pagination__link_active(href="#") 1
+            a.pagination__link(href="#") 2
+            a.pagination__link(href="#") 3
+            a.pagination__link(href="#") 4
+            a.pagination__link(href="#") 5
+            a.pagination__link(href="#") 6
+            span .....
+            a.pagination__link(href="#") 20
+            a(href="#")
+                img(src="img/pagination/arrow-right.svg" alt="right")

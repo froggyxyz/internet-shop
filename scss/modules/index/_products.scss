@@ -98,4 +98,7 @@
       }
     }
   }
+  &__wrapper {
+    @include flexSettings(row, nowrap, center, center);
+  }
 }
